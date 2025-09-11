@@ -18,7 +18,7 @@ const App = () => {
     setIsLoading(true);
     setReview("");
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", { code });
+const response = await axios.post("https://ai-code-reviewer-jb25.onrender.com/", { code });
       setReview(response.data);
     } catch (e) {
       setReview("⚠️ Unable to get review. Check your server or console.");
